@@ -7,4 +7,4 @@ spring:
     password: ngelmak
   liquibase:
     change-log: classpath:config/liquibase/master.xml
-    enabled: true
+    enabled: false
