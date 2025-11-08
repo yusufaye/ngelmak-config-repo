@@ -36,11 +36,10 @@ ngelmak:
   mail:
     base-url: http://127.0.0.1:8080
   security:
-    authentication:
-      jwt:
-        secret: NzgwODE3NjExMzk1MDFjYzc2NmRjMmM2Yjc0ZTYyMGUxODM3ZThjMzk0ZTliMTE0MjhlNjliOWRhYTI2MzFkN2RkMGU3NDVhYTA0MzRkNTBkNGEzYmZlMzE1MTg4ZjVmYzA5NmFlNTEyZjkyZjYxMGJlMTM1NmU3ZmU0NDg2Yjk=
-        token-validity-in-seconds: 86400
-        token-validity-in-seconds-for-remember-me: 2592000
+    jwt:
+      secret: NzgwODE3NjExMzk1MDFjYzc2NmRjMmM2Yjc0ZTYyMGUxODM3ZThjMzk0ZTliMTE0MjhlNjliOWRhYTI2MzFkN2RkMGU3NDVhYTA0MzRkNTBkNGEzYmZlMzE1MTg4ZjVmYzA5NmFlNTEyZjkyZjYxMGJlMTM1NmU3ZmU0NDg2Yjk=
+      token-validity-in-seconds: 86400
+      token-validity-in-seconds-for-remember-me: 2592000
   file:
     upload-directory:
       location: ./ngelmak-directory/files
