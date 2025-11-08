@@ -1,0 +1,58 @@
+spring:
+  application:
+    name: Ngelmak Project Authenticator
+  datasource:
+    url: jdbc:postgresql://localhost:5432/ngelmak_auth_db
+    username: ngelmak
+    password: ngelmak
+  jpa:
+    hibernate:
+      ddl-auto: update
+    generate-ddl: true
+  jackson:
+    serialization:
+      fail-on-empty-beans: false
+  mail:
+    host: smtp.xxx.com
+    username: xxx@xxx.com
+    password: xxxxx
+    properties:
+      mail.smtp.auth: true
+      mail.smtp.starttls.enable: true
+      mail.smtp.starttls.required: true
+  liquibase:
+    change-log: classpath:config/liquibase/master.xml
+    enabled: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 30MB
+      max-request-size: 30MB
+      resolve-lazily: false
+
+ngelmak:
+  clientApp:
+    name: 'Ngelmak Authenticator'
+  mail:
+    base-url: http://127.0.0.1:8080
+  security:
+    authentication:
+      jwt:
+        secret: NzgwODE3NjExMzk1MDFjYzc2NmRjMmM2Yjc0ZTYyMGUxODM3ZThjMzk0ZTliMTE0MjhlNjliOWRhYTI2MzFkN2RkMGU3NDVhYTA0MzRkNTBkNGEzYmZlMzE1MTg4ZjVmYzA5NmFlNTEyZjkyZjYxMGJlMTM1NmU3ZmU0NDg2Yjk=
+        token-validity-in-seconds: 86400
+        token-validity-in-seconds-for-remember-me: 2592000
+  file:
+    upload-directory:
+      location: ./ngelmak-directory/files
+    public:
+      access:
+        location: /resources/public/files
+    private:
+      access:
+        location: /resources/files
+
+logging:
+  level:
+    org.hibernate.SQL: WARN
+    org.springframework.jdbc.core.JdbcTemplate: DEBUG
+    org.springframework.jdbc.core.StatementCreatorUtils: TRACE
